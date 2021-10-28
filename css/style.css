@@ -6,7 +6,8 @@ header{
 display: flex;
 flex-direction: column;
 align-items: center;
-border-bottom: 3px solid #50C7C7;
+position: static;
+/* border-bottom: 3px solid #50C7C7; */
 }
 
 a:link, a:visited {
@@ -19,7 +20,7 @@ background-image: url("../images/concrete_seamless.png");
 background-color: #f1f1f1
 }
 
-body > header {
+/* body > header {
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -28,7 +29,7 @@ position: sticky;
 width: 100%;
 top: 0;
 background-color: #f1f1f1
-}
+} */
 
 @keyframes logo{
   0%{width: 50px; opacity: 0;}
@@ -181,40 +182,46 @@ text-align: center;
 }
 
 @media screen and (min-width: 850px){
-.card_big{
-    -webkit-transform: scaleY(1.1);
-    transform: scaleY(1.1);
-    z-index: -99;
-}
+  .card_big{
+      -webkit-transform: scaleY(1.1);
+      transform: scaleY(1.1);
+      z-index: -99;
+  }
 
-.card {
-  flex-basis: 250px;
-}
+  .nav_links {
+    flex-direction: row;
+  }
+  .top-header {
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    position:fixed;
+  }
 
-.nav_links {
-  flex-direction: row;
-}
 
 }
 
 @media print{
   body{
     background-image: none;
+    background-color: #ffffff;
   }
 
   .pricing{
     align-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: row;
   }
 
   .nav_links{
-    width: 100%;
+    display: flex; 
+    flex-direction: row;
     justify-content: space-evenly;
   }
 
   nav{
-    display: flex;
-    flex-flow: row wrap;
     width: 100%;
+    justify-content: space-evenly; 
   }
 
   .gallery{
