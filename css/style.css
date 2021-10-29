@@ -10,12 +10,10 @@ position: static;
 /* border-bottom: 3px solid #50C7C7; */
 }
 
-a:link, a:visited {
-  color: #0000EE;
-}
+
 
 body{
-font-family: 'Alegreya Sans SC', sans-serif;
+font-family: 'Alegreya Sans SC', serif;
 background-image: url("../images/concrete_seamless.png");
 background-color: #f1f1f1
 }
@@ -30,6 +28,10 @@ width: 100%;
 top: 0;
 background-color: #f1f1f1
 } */
+
+a:link, a:visited {
+  color: #0000EE;
+}
 
 @keyframes logo{
   0%{width: 50px; opacity: 0;}
@@ -91,8 +93,8 @@ border: 2px solid black;
 }
 
 .nav_links {
-  display: flex;
   flex-direction: column;
+  display: flex;
 }
 
 .nav_item a{
